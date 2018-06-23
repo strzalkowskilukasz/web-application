@@ -22,6 +22,7 @@
                         <th>Nazwisko</th>
                         <th>E-mail</th>
                         <th>Akcja</th>
+                        <th></th>
 
                     </tr>
                     </thead>
@@ -34,9 +35,12 @@
                         <td>${user.email}</td>
                         <td>
                         <a href="/users/update?id=${user.id}" class = "btn btn-primary">edytuj</a>
-                        <form action="/users/delete" method= POST">
+                        </td>
+                        <td>
+                        <form action="/users/delete" method= POST>
                         <input type="hidden" name="id" value="${user.id}">
-                        <button type="submit" class = "btn btn-danger">usuń</button>
+                        </form>
+                        <button type="submit" class="btn btn-danger">usuń</button>
                         </td>
                     </tr>
                     </c:forEach>
