@@ -34,7 +34,7 @@ public class UsersServlet extends HttpServlet {
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/users.jsp");
         rd.forward(req, resp);
         } catch (SQLException e) {
-            e.printStackTrace();
+            e.printStackTrace();  // tu możemy przekierować jak coś pojdzie nie tak do 404- nowy jsp.
         }
     }
 }
